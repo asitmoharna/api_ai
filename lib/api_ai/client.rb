@@ -3,6 +3,8 @@ require File.expand_path('../request', __FILE__)
 
 module ApiAi
   class Client
+    Dir[File.expand_path('../client/*.rb', __FILE__)].each{|f| require f}
+
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 
     # Override the default options with given options
@@ -24,5 +26,6 @@ module ApiAi
 
     include Connection
     include Request
+    include ApiAi::Client::Entity
   end
 end
