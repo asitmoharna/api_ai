@@ -7,7 +7,8 @@ module ApiAi
       :client_secret,
       :endpoint,
       :format,
-      :api_version
+      :api_version,
+      :user_agent
     ].freeze
 
     DEFAULT_ACCESS_TOKEN = nil
@@ -17,6 +18,7 @@ module ApiAi
     DEFAULT_ENDPOINT = 'https://api.api.ai/'.freeze
     DEFAULT_FORMAT = :json
     DEFAULT_API_VERSION = 'v1'
+    DEFAULT_USER_AGENT = "ApiAi Ruby Gem #{ApiAi::VERSION}"
 
     attr_accessor *VALID_OPTIONS_KEYS
 
@@ -32,6 +34,7 @@ module ApiAi
       self.endpoint = DEFAULT_ENDPOINT 
       self.format = DEFAULT_FORMAT
       self.api_version = DEFAULT_API_VERSION
+      self.user_agent = DEFAULT_USER_AGENT
     end
 
     def options

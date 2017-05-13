@@ -35,7 +35,8 @@ describe ApiAi::Client do
        client_secret: 'some_client_secret',
        endpoint: 'api.somethingelse.com/v1',
        format:  :xml,
-       api_version: 'v3'
+       api_version: 'v3',
+       user_agent: 'crawler'
       }
     end
 
