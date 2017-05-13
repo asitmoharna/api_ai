@@ -8,4 +8,15 @@ describe ApiAi do
   it 'does something useful' do
     expect(true).to eq(true)
   end
+
+  describe '.configure' do
+    ApiAi::Configuration::VALID_OPTIONS_KEYS.each do |key|
+      it "can configure key - #{key}" do
+        ApiAi.configure do |config|
+          config.send("#{key}=", key)
+          expect(ApiAi.send(key)).to eq(key)
+        end
+      end
+    end
+  end
 end
