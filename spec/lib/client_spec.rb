@@ -36,7 +36,8 @@ describe ApiAi::Client do
        endpoint: 'api.somethingelse.com/v1',
        format:  :xml,
        api_version: 'v3',
-       user_agent: 'crawler'
+       user_agent: 'crawler',
+       connection_options: {proxy: true} 
       }
     end
 
