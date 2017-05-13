@@ -37,7 +37,7 @@ describe ApiAi::Client do
        format:  :xml,
        api_version: 'v3',
        user_agent: 'crawler',
-       connection_options: {proxy: true} 
+       connection_options: {proxy: true}
       }
     end
 
@@ -47,7 +47,12 @@ describe ApiAi::Client do
         expect(client.send(key)).to eq(@configuration[key])
       end
     end
-  end
 
+    it 'uses connection_options' do
+      client = ApiAi::Client.new(@configuration)
+      expect(Faraday::Connection).to receive(:new).with(any_args)
+      client.send(:connection)
+    end
+  end
 end
 

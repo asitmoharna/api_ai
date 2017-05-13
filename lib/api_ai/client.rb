@@ -1,3 +1,5 @@
+require File.expand_path('../connection', __FILE__)
+
 module ApiAi
   class Client
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
@@ -18,5 +20,7 @@ module ApiAi
       end
       conf
     end
+
+    include Connection
   end
 end
