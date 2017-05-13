@@ -9,9 +9,10 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Asit Moharna"]
   spec.email         = ["asitkmoharna@gmail.com"]
 
-  spec.summary       = %q{Non-official http://api.ai ruby client.}
-  spec.description   = %q{Non-official http://api.ai ruby client.}
+  spec.summary       = %q{Non-official http://api.ai ruby SDK.}
+  spec.description   = %q{This is a non-official http://api.ai ruby SDK. As the existing SDK doesn't have all the features, thought of re-writing the entire thing from scratch}
   spec.homepage      = "https://github.com/asitmoharna/api_ai"
+  spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -29,8 +30,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "webmock", "~> 2.1.0"
-  spec.add_development_dependency "pry"
+  spec.add_development_dependency "webmock", "~> 2.1"
+  spec.add_development_dependency "pry", "~> 0"
 
   spec.add_dependency "faraday", "~> 0.12.1"
 end
