@@ -1,3 +1,4 @@
+require 'json'
 module ApiAi
   module Request
     [:get, :post, :put, :delete].each do |http_method|
